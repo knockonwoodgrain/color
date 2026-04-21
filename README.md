@@ -101,22 +101,22 @@ Most cameras record in their own color spaces which they should refer to when yo
 It's important to know what color space you're recording it, since you will need to convert it later into Rec.709.
 
 ## Gamma Curve / Correction
-The Gamma of the video defines the luminance curve of the video. Camera sensors record and recieve video in the linear format, which simply means that the amount of light that is captured is not modified and thus it doesn't look like a displayed image. 
+The Gamma of the video defines the luminance curve of the video, it doesn't affect the color. Camera sensors record and recieve video in the linear format, which simply means that the amount of light that is captured is not modified and thus it doesn't look like a displayed image. 
 
 A Gamma curve is required to compress and add contrast to the linear image so that displays can, well, display it. The video gamma curve is also called the transfer curve sometimes.
 
-The default gamma curve is 2.2 on most display devices, though it used to be Gamma 2.4. Since Gamme2.4 was the most used and popular one, many platforms and videos still prefer Gamma 2.4 as it's upload format. Which is why YouTube really sucks at processing videos that are encoded in Gamma 2.2, since it applies it's own gamma curve and the blacks dip down and the image becomes much darker (personal experience). 
+The default gamma curve is 2.2 on most display devices, though in broadcast and television it is Gamma 2.4. Since Gamme2.4 was the most used and popular one, many platforms and videos still prefer Gamma 2.4 as it's upload format. Which is why YouTube really sucks at processing videos that are encoded in Gamma 2.2, since it applies it's own gamma curve and the blacks dip down and the image becomes much darker (personal experience). 
 
 Wikipedia Link: [Gamma Correction](https://en.wikipedia.org/wiki/Gamma_correction) 
 
 
 ## Log Profile
-Log profiles are just gamma curves that give a "wide and dynamic tonal range". Which is why it appears so washed out when displayed directly, since it has to capture as much data as it can while it also saves on data (compared to linear) as it still applies a gamma curve.
+Log profiles are just gamma curves that give a "wide and dynamic tonal range", these aren't meant to be displayed. Which is why it appears so washed out when displayed directly, since it has to capture as much data as it can while it also saves on data (compared to linear) as it still applies a gamma curve.
 
 When referring to Log profiles and cameras, it is also assumed that the color space will be co-related to the gamma curve. 
 
-In Sony Cameras the Log Profile is Slog3, when it actually referres to the 
-color space: Sgamut 3 
+In Sony Cameras the Log Profile is Slog3, when it actually referres to the   
+color space: Sgamut 3 \
 gamma: Slog3
 
 In Fujifilm cameras it's
@@ -164,7 +164,7 @@ Once you understand color management, this tutorial only shows how to do it auto
 
 [Color Space Transform - PRO COLORIST Explains](https://www.youtube.com/watch?v=CtSBVKmHkjU) 
 
-Here, you'll understand how you can group your clips according to your color space, and then use these groups to do the color transoforms.
+Here, you'll understand how you can group your clips according to your color space, and then use these groups to do the color transforms.
 
 It also shows something extremely imporant, which is your working color space. Your working color space (and gamma) is where the grade is applied, and in Resolve, your working color space should be
 
@@ -174,7 +174,7 @@ and the working gamma would be
 
 DaVinci Intermediate
 
-This is a huge color space and gamma made my Blackmagic for colorists to grade in. 
+This is a huge color space and gamma made by Blackmagic for colorists to grade in. 
 
 Now, once you're using groups to assign your color space, and using color space transforms (better than colormanagement), you're ready to go to the next step.
 
